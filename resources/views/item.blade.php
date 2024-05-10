@@ -1,0 +1,1 @@
+{!! $data->aju_item !!}
