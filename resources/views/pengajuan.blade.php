@@ -7,15 +7,17 @@
                 <div class="card-header">
                     <h5>Table Pengajuan</h5>
                 </div>
-                <div class="row">
-                    <div class="col-md-2 col-xs-12 ml-3 mt-3">
-                        <div class="form-group">
-                            <a href="#" onclick="tambah()" class="btn btn-success btn-block tambah"><i
-                                    class="fa fa-plus"></i>
-                                Tambah</a>
+                @if (auth()->user()->status == 'Staff')
+                    <div class="row">
+                        <div class="col-md-2 col-xs-12 ml-3 mt-3">
+                            <div class="form-group">
+                                <a href="#" onclick="tambah()" class="btn btn-success btn-block tambah"><i
+                                        class="fa fa-plus"></i>
+                                    Tambah</a>
+                            </div>
                         </div>
                     </div>
-                </div>
+                @endif
                 <div class="card-body table-border-style">
                     <div class="table-responsive">
                         <table class="table table-striped table-hover display" id="table-pengajuan" width="100%">
